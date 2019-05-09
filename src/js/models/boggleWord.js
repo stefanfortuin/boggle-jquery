@@ -27,7 +27,6 @@ export default class boggleWord{
   }
 
   saveWord(){
-	  console.log("saving");
 	  window.wordBasket.add(this.word);
 	  this.clear();
 	  window.board.renderDice();

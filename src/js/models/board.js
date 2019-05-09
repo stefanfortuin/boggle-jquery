@@ -54,7 +54,6 @@ export default class board{
 
 	for (const die of this._dice) {
 		die.centerOfDiv();
-		console.log(die.center);
 	}
 
 	window.lineDrawer.drawLine();
