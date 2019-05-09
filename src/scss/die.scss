@@ -1,0 +1,17 @@
+.die{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 125px;
+  height: 125px;
+  margin: 2px;
+  user-select: none;
+  background-color: grey;
+  color: white;
+  transition: background-color 0.2s;
+}
+
+.die:hover{
+  cursor: pointer;
+  background-color: rgb(160, 93, 30);
+}
