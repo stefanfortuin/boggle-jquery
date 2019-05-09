@@ -13,9 +13,8 @@ export default class board{
   initListeners(){
     for (const die of this._dice) {
       $('#' + die.data.id).click(() => {
-
-        if (window.boggle_word.contains(die)){
-          this.removeChar(die)
+        if (die.selected){
+          this.removeChar(die);
           return;
         }
 
@@ -47,7 +46,7 @@ export default class board{
   }
 
   renderDice(){
-    console.log("rendering");
+    console.log("rendering board");
     this._div.empty();
     for (const die of this._dice) {
       let d = die.render();

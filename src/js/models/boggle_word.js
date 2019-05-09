@@ -7,16 +7,15 @@ export default class boggle_word{
   }
 
   add(die){
-    console.log("adding")
     die.selected= true;
     this._word.push(die);
     this.render();
   }
 
   remove(die){
-    console.log("removing")
-    let d = this._word.find(d => d.data.id == die.data.id);
-    let dieIndex = this._word.indexOf(d);
+    let found_die = this._word.find(d => d.data.id == die.data.id);
+    let dieIndex = this._word.indexOf(found_die);
+    console.log(this._word);
 
     for (const die of this._word.slice(dieIndex, 0)) {
       die.selected = false;
@@ -24,11 +23,6 @@ export default class boggle_word{
 
     this._word = this._word.slice(0, dieIndex);
     this.render();
-  }
-
-  contains(die){
-    let d = this._word.find(w => w.data.id == die.data.id);
-    return (d)? true: false
   }
 
   clear(){
