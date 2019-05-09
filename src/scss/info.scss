@@ -1,0 +1,33 @@
+.info{
+	display: flex;
+	flex-flow: column;
+	font-family: Arial, Helvetica, sans-serif;
+		font-weight: bold;
+	
+	.word-basket{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: column;
+		background-color: grey;
+		color: white;
+		height: 455px;
+		width: 400px;
+
+		overflow-y: auto;
+		max-height: 480px;
+
+		font-size: 40px;
+	}
+
+	.score{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 70px;
+		width: 400px;
+		font-size: 25px;
+		font-weight: bold;
+		color: black;
+	}
+}

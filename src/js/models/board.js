@@ -1,5 +1,4 @@
 import die from './die'
-import wordBasket from './wordBasket';
 
 export default class board{
   constructor(){
@@ -7,7 +6,6 @@ export default class board{
     this._div = $(".board");
     this.initDice()
     this.renderDice();
-    this.initListeners();
   }
 
   initListeners(){
@@ -18,7 +16,7 @@ export default class board{
           return;
         }
 
-        let lastDice = window.boggle_word.lastDice;
+        let lastDice = window.boggleWord.lastDice;
         if (!die.isAdjescent(lastDice))
           return;
 
@@ -28,12 +26,12 @@ export default class board{
   }
 
   removeChar(die){
-    window.boggle_word.remove(die);
+    window.boggleWord.remove(die);
     this.renderDice();
   }
 
   addChar(die){
-    window.boggle_word.add(die);
+    window.boggleWord.add(die);
     this.renderDice();
   }
 
@@ -47,12 +45,21 @@ export default class board{
 
   renderDice(){
     console.log("rendering board");
-    this._div.empty();
+    this._div.find('*').not('#word-line').remove();
+
     for (const die of this._dice) {
       let d = die.render();
       d.appendTo(this._div);
     }
+
+	for (const die of this._dice) {
+		die.centerOfDiv();
+		console.log(die.center);
+	}
+
+	window.lineDrawer.drawLine();
     this.initListeners();
+	
   }
 
   get dice(){

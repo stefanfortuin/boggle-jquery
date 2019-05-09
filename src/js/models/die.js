@@ -6,22 +6,22 @@ export default class die{
     this.selected = false;
   }
 
-  center(){
+  centerOfDiv(){
     let die = document.getElementById(this._id);
     let diePos = die.getBoundingClientRect();
 
-		let left = diePos.left;
-		let right = diePos.right;
-		let top = diePos.top;
-		let bottom = diePos.bottom;
+	let left = diePos.left;
+	let right = diePos.right;
+	let top = diePos.top;
+	let bottom = diePos.bottom;
 
-		let x = left + ((right - left) / 2);
-		let y = top - ((top - bottom) / 2);
+	let x = left + ((right - left) / 2);
+	let y = top - ((top - bottom) / 2);
 
-		this._center = {
-			x,
-			y
-		}
+	this.center = {
+		x,
+		y
+	}
   }
 
   isAdjescent(otherDie) {
@@ -53,13 +53,10 @@ export default class die{
   }
 
   get data(){
-    if (!this._center)
-      this.center();
-
     return{
       id: this._id,
       char: this._char,
-      center: this._center,
+      center: this.center,
       coord: this.coord,
     }
   }
