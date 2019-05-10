@@ -3,7 +3,7 @@ export default class Timer{
     this._timer_div = $("<div class='timer'/>")
     this._container = $(".container");
     this._time = "";
-    this._playtime_seconds = 10;
+    this._playtime_seconds = 180;
     this.start();
   }
 
