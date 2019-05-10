@@ -12,9 +12,10 @@
 	height: 100vh;
 	width: 100vw;
   flex-flow: row wrap;
+  transition: filter 0.2s;
 
   &.blur{
-    filter: blur(10px);
+    filter: blur(30px);
   }
 
 	.game{
