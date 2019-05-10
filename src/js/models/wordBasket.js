@@ -23,6 +23,10 @@ export default class wordBasket{
     this.render();
   }
 
+  contains(word){
+    return this._words.map(o => o.word).includes(word);
+  }
+
   render(){
     this._word_basket.empty();
     for (const word of this._words) {
