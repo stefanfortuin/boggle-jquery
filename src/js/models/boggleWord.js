@@ -48,21 +48,21 @@ export default class boggleWord {
 		return this._dice[this._dice.length - 1];
 	}
 
-	renderMessage(message){
+	renderMessage(message) {
 		this._message_div.empty();
 		this._message_div.append(message);
 	}
 
 	render() {
-    this._div.empty()
-    this._message_div.empty();
-    this._save_button.hide();
+		this._div.empty()
+		this._message_div.empty();
+		this._save_button.hide();
 
-    if (this.word.length == 0)
-      return;
+		if (this.word.length == 0)
+			return;
 
-    let isProperLength = this.word.length > 3 ;
-    let isFound = window.wordBasket.contains(this.word);
+		let isProperLength = this.word.length > 3;
+		let isFound = window.wordBasket.contains(this.word);
 		if (!isProperLength) this.renderMessage("Too short");
 		if (isFound) this.renderMessage("Word already found")
 

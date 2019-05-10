@@ -1,20 +1,20 @@
-.die{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 125px;
-  height: 125px;
-  margin: 2px;
-  user-select: none;
-  background-color: grey;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 24px;
-  font-weight: bold;
-  transition: background-color 0.2s;
+.die {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 125px;
+	height: 125px;
+	margin: 2px;
+	user-select: none;
+	background-color: grey;
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	font-weight: bold;
+	transition: background-color 0.2s;
 }
 
-.die:hover{
-  cursor: pointer;
-  background-color: rgb(160, 93, 30);
+.die:hover {
+	cursor: pointer;
+	background-color: rgb(160, 93, 30);
 }

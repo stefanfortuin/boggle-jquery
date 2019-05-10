@@ -6,20 +6,20 @@
 @import './word-saver.scss';
 @import './word-line.scss';
 
-.container{
+.container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
 	width: 100vw;
-  flex-flow: row wrap;
-  transition: filter 0.2s;
+	flex-flow: row wrap;
+	transition: filter 0.2s;
 
-  &.blur{
-    filter: blur(30px);
-  }
+	&.blur {
+		filter: blur(30px);
+	}
 
-	.game{
+	.game {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -30,7 +30,7 @@
 
 
 
-body{
+body {
 	margin: 0;
 	overflow: hidden;
 }
