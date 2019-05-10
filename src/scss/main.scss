@@ -1,6 +1,7 @@
 @import './board.scss';
 @import './die.scss';
 @import './info.scss';
+@import './end-screen.scss';
 @import './word-saver.scss';
 @import './word-line.scss';
 
@@ -10,7 +11,11 @@
 	align-items: center;
 	height: 100vh;
 	width: 100vw;
-	flex-flow: row wrap;
+  flex-flow: row wrap;
+
+  &.blur{
+    filter: blur(10px);
+  }
 
 	.game{
 		display: flex;
@@ -20,6 +25,8 @@
 		height: 525px;
 	}
 }
+
+
 
 body{
 	margin: 0;

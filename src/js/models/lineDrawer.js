@@ -1,7 +1,7 @@
 export default class lineDrawer{
 	constructor(){
 		this._canvas = document.getElementById('word-line');
-	}
+  }
 
 	drawLine() {
 		this._canvas.height = window.innerHeight;

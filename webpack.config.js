@@ -43,7 +43,7 @@ const config = {
               limit: 8192,
               name: '[name].[ext]',
               fallback: 'file-loader',
-              outputPath: 'public/images',
+              outputPath: '/assets',
             },
           },
           {

@@ -1,3 +1,5 @@
+import Word from './word'
+
 export default class boggleWord{
   constructor(){
     this._dice = [];
@@ -27,7 +29,8 @@ export default class boggleWord{
   }
 
   saveWord(){
-	  window.wordBasket.add(this.word);
+    let word = new Word(this.word)
+	  window.wordBasket.add(word);
 	  this.clear();
 	  window.board.renderDice();
   }
