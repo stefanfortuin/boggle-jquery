@@ -33,7 +33,6 @@ export default class wordBasket {
 			let d = $("<div class='word'/>");
 			d.append(word.word);
 
-			console.log(word);
 			if (word.correct != null) {
 				(word.correct)
 					? d.append("<img class='check' src='/assets/check_green.png'/>")

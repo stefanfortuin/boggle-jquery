@@ -37,9 +37,7 @@ export default class boggleWord {
 	}
 
 	clear() {
-		for (const die of this._dice) {
-			die.selected = false;
-		}
+		window.board.resetSelectedDice();
 		this._dice = [];
 		this.render();
 	}

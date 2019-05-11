@@ -10,10 +10,21 @@ export default class board {
 		this.renderDice();
 	}
 
-	clear() {
+	resetSelectedDice() {
 		for (const die of this._dice) {
 			die.selected = false;
 		}
+	}
+
+	resetInfoComponents(){
+		window.boggleWord.clear();
+		window.timer.reset();
+		window.wordBasket.clear();
+	}
+
+	refillBoard(){
+		this._dice = [];
+		this.initDice();
 	}
 
 	initListeners() {
@@ -71,10 +82,9 @@ export default class board {
 		this._container.removeClass("blur");
 		$(".end-screen").remove();
 
-		this.clear();
-		window.boggleWord.clear();
-		window.timer.reset();
-		window.wordBasket.clear();
+		this.resetSelectedDice();
+		this.resetInfoComponents();
+		this.refillBoard();
 		this.renderDice();
 	}
 

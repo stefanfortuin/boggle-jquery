@@ -7,13 +7,19 @@ export default class word {
 	}
 
 	check() {
+		let data = {"word": "" + this._word, "score": this._score};
+		let form_data = JSON.stringify(data);
+		
 		$.ajax({
 			type: "POST",
-			url: 'http://boggle.stefanfortuin.nl/api/word',
-			data: { word: this.word, score: this.score },
+			url: 'http://192.168.178.23:5112/api/word',
+			data: form_data,
+			contentType: "application/json",
+			dataType: "json",
 			timeout: 3000,
 		}).done((response) => {
-			this._correct = response.data.correct;
+			console.log(response);
+			this._correct = response.correct;
 			this.renderBasket();
 		}).fail((error) => {
 			this._correct = false;
